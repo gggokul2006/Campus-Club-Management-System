@@ -1,0 +1,149 @@
+/* ============================
+   MY MEMBERSHIP PAGE STYLES
+   ============================ */
+.membership-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  font-family: 'Inter', sans-serif;
+
+  /* Full background image */
+  background-image: url("../img-back.jpg"); /* replace with your image path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Light overlay for readability */
+.membership-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65); /* transparent white overlay */
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+/* Make content visible above overlay */
+.membership-page * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Title */
+.membership-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Membership list layout */
+.membership-list {
+list-style: none;
+padding: 0;
+margin: 0;
+width: 100%;
+max-width: 850px;
+}
+
+/* Card container */
+.membership-card {
+background: rgba(255, 255, 255, 0.9);
+margin: 15px 0;
+padding: 25px 25px;
+border-radius: 12px;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+backdrop-filter: blur(6px);
+}
+
+.membership-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card text styling */
+.membership-card h3 {
+margin: 0 0 10px;
+color: #2563eb;
+font-size: 1.25rem;
+}
+
+.membership-card p {
+margin: 5px 0;
+color: #374151;
+font-size: 0.95rem;
+}
+
+.leave-btn {
+background-color: #ef4444;
+color: #fff;
+border: none;
+padding: 8px 16px;
+border-radius: 6px;
+cursor: pointer;
+font-weight: 500;
+margin-top: 10px;
+transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.leave-btn:hover {
+background-color: #b91c1c;
+transform: scale(1.03);
+}
+
+/* Error message */
+.error {
+color: #dc2626;
+font-weight: 500;
+text-align: center;
+margin-bottom: 20px;
+}
+
+/* Empty state */
+.membership-page p {
+font-size: 1rem;
+}
+
+/* Pagination */
+.pagination {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 25px;
+gap: 15px;
+}
+
+.pagination button {
+background-color: #3b82f6;
+color: white;
+border: none;
+padding: 6px 14px;
+border-radius: 6px;
+cursor: pointer;
+transition: background 0.3s ease;
+font-size: 0.9rem;
+}
+
+.pagination button:hover {
+background-color: #2563eb;
+}
+
+.pagination button:disabled {
+background-color: #94a3b8;
+cursor: not-allowed;
+}
+
+.pagination span {
+font-weight: 500;
+color: #1e293b;
+}

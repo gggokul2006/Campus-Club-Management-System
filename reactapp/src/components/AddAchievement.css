@@ -1,0 +1,164 @@
+.add-achievement-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../achie.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ensures it starts near top */
+  padding: 60px 0; /* less side padding */
+}
+
+/* Soft Overlay */
+.add-achievement-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 0;
+}
+
+.add-achievement-wrapper * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ✅ Wider & more elegant container */
+.add-achievement-container {
+  width: 90%; /* responsive width */
+  max-width: 750px; /* much wider */
+  margin: 60px auto;
+  padding: 40px 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.add-achievement-container h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: #111827;
+  border-bottom: 2px solid #3b82f6;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.add-achievement-container .achievement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-achievement-container .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.add-achievement-container .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-achievement-container .form-group label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.add-achievement-container .form-group input,
+.add-achievement-container .form-group select,
+.add-achievement-container .form-group textarea {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  transition: border-color 0.2s;
+}
+
+.add-achievement-container .form-group input:focus,
+.add-achievement-container .form-group select:focus,
+.add-achievement-container .form-group textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+.add-achievement-container .form-group textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.add-achievement-container .checkbox-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.add-achievement-container .checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.add-achievement-container .message {
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+
+.add-achievement-container .message.success {
+background-color: #e6ffed;
+border: 1px solid #9fe6b8;
+color: #065f46;
+}
+
+.add-achievement-container .message.error {
+background-color: #ffe6e6;
+border: 1px solid #f3a6a6;
+color: #b91c1c;
+}
+
+.add-achievement-container .error {
+color: #dc2626;
+font-size: 0.875rem;
+margin-top: 2px;
+}
+
+.add-achievement-container button {
+padding: 14px 22px;
+background-color: #3b82f6;
+color: #fff;
+font-weight: 600;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 1rem;
+transition: background-color 0.2s;
+align-self: flex-start;
+}
+
+.add-achievement-container button:hover {
+background-color: #2563eb;
+}
+
+.add-achievement-container button:disabled {
+background-color: #93c5fd;
+cursor: not-allowed;
+}
+
+@media (max-width: 700px) {
+.add-achievement-container .form-row {
+grid-template-columns: 1fr;
+}
+}

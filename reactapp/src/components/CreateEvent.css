@@ -1,0 +1,150 @@
+/* ============================
+   CREATE EVENT PAGE STYLING
+   ============================ */
+
+.create-event-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  background-image: url("../img-back.jpg"); /* same background as club list */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* subtle parallax effect */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Light overlay for readability */
+.create-event-page::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.75);
+z-index: 0;
+}
+
+/* Ensure all elements appear above overlay */
+.create-event-page * {
+position: relative;
+z-index: 1;
+}
+
+/* ============================
+CARD CONTAINER
+============================ */
+
+.create-event-card {
+background: rgba(255, 255, 255, 0.95);
+padding: 40px 45px;
+border-radius: 16px;
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+width: 100%;
+max-width: 520px;
+backdrop-filter: blur(6px);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-event-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.create-event-card h1 {
+text-align: center;
+margin-bottom: 25px;
+color: #111827;
+font-size: 1.8rem;
+font-weight: 700;
+}
+
+/* ============================
+FORM FIELDS
+============================ */
+
+.create-event-card form {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+.create-event-card input,
+.create-event-card textarea,
+.create-event-card select {
+padding: 12px 14px;
+border-radius: 8px;
+border: 1px solid #cbd5e1;
+font-size: 15px;
+outline: none;
+transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create-event-card input:focus,
+.create-event-card textarea:focus,
+.create-event-card select:focus {
+border-color: #3b82f6;
+box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.create-event-card textarea {
+resize: vertical;
+min-height: 100px;
+}
+
+/* ============================
+BUTTON STYLES
+============================ */
+
+.create-event-card button {
+padding: 12px;
+background-color: #3b82f6;
+color: white;
+font-weight: 600;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background 0.3s ease, transform 0.2s ease;
+box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3);
+}
+
+.create-event-card button:hover {
+background-color: #2563eb;
+transform: translateY(-2px);
+}
+
+/* ============================
+STATUS MESSAGES
+============================ */
+
+.error {
+margin-top: 12px;
+color: #dc2626; /* red */
+text-align: center;
+font-weight: 600;
+}
+
+.success-message {
+margin-top: 12px;
+color: #16a34a; /* green */
+text-align: center;
+font-weight: 600;
+}
+
+/* ============================
+RESPONSIVENESS
+============================ */
+
+@media (max-width: 768px) {
+.create-event-card {
+padding: 25px 30px;
+}
+
+.create-event-card h1 {
+font-size: 1.5rem;
+}
+}

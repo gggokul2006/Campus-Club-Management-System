@@ -1,0 +1,298 @@
+/* Home container */
+.home-container {
+  max-width: 100%;
+  margin: 0 -20px;
+  padding: 20px;
+}
+
+/* Full-width background for hero + stats */
+.hero-stats-wrapper {
+  position: relative;
+  width: 100%;              
+  background-image: url('../15.jpg'); /* replace with your image */
+  background-size: cover;          
+    
+  background-repeat: no-repeat;    
+  padding: 60px 0; /* top/bottom padding only */
+  color: white;
+  overflow: hidden;         
+  display: flex;
+  flex-direction: column;
+  gap: 60px;                
+}
+
+.hero-stats-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay for readability */
+  z-index: 0;
+}
+
+.hero-stats-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Inner container to align content like original layout */
+.hero-stats-wrapper .home-container-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* small padding for mobile */
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+}
+
+
+.hero p {
+  font-size: 1.2rem;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.5);
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-primary:hover { background-color: #2563eb; }
+
+.btn-secondary {
+  background-color: rgba(255,255,255,0.3);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-secondary:hover { background-color: rgba(255,255,255,0.5); }
+
+/* Stats section */
+.stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stats .card {
+flex: 1;
+min-width: 180px;
+max-width: 250px;
+background-color: rgba(255, 255, 255, 0.2);
+color: white;
+padding: 25px 20px;
+border-radius: 12px;
+text-align: center;
+box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats .card:hover {
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.stats .card h2 { font-size: 2rem; margin-bottom: 8px; }
+.stats .card p { font-size: 1rem; }
+
+/* Quick Actions */
+.quick-actions { 
+    margin: 40px 35px; 
+} 
+.quick-actions h2 { 
+    font-size: 1.5rem; 
+    margin-bottom: 20px; 
+    color: #1e293b; 
+} 
+
+/* Grid fix for admin quick actions */ 
+.actions-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* reduced min-width */ 
+    gap: 15px; /* reduce gap */ 
+} 
+
+/* Quick Action Cards */ 
+.action-card { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background: #f9fafb; 
+    border-radius: 12px; 
+    padding: 14px 16px; /* reduced padding */ 
+    font-size: 1rem; /* smaller font */ 
+    font-weight: 500; 
+    color: #1e293b; 
+    text-decoration: none; 
+    text-align: center; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+} 
+.action-card:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1); 
+    background: #f1f5f9; 
+} 
+
+/* Recently Added Clubs */ 
+.recent-clubs { 
+    margin: 40px 0; 
+} 
+.recent-clubs h2 { 
+    font-size: 1.5rem; 
+    margin-bottom: 15px; 
+    color: #1e293b; 
+} 
+.recent-clubs ul { 
+    list-style: none; 
+    padding: 0; 
+} 
+.recent-clubs li { 
+    background: #f9fafb; 
+    padding: 12px 16px; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+    color: #334155; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+} 
+
+/* Upcoming Events */ 
+.events { 
+    margin: 40px 0; 
+} 
+.events h2 { 
+    font-size: 1.5rem; 
+    margin-bottom: 15px; 
+    color: #1e293b; 
+} 
+.events ul { 
+    list-style: none; 
+    padding: 0; 
+} 
+.events li { 
+    background: #fff7ed; 
+    padding: 12px 16px; 
+    margin-bottom: 10px;
+    margin: 10px 41px; 
+    border-radius: 8px; 
+    color: #7c2d12; 
+    border-left: 5px solid #f97316; 
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+} 
+
+/* Club Search */
+.club-search {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 15px;
+margin:41px;
+}
+.club-search h2 {
+margin: 0;
+font-size: 1.5rem;
+color: #1e293b;
+}
+.search-input {
+width: 500px;
+padding: 8px 12px;
+font-size: 1rem;
+border: 2px solid #ddd;
+border-radius: 25px;
+outline: none;
+transition: all 0.3s ease;
+}
+.search-input:focus {
+border-color: #3b82f6;
+box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Filtered Clubs list styling (re-using .recent-clubs ul li) */
+.recent-clubs ul li {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #f9fafb;
+margin: 10px 41px;
+padding: 10px 41px;
+border-radius: 12px;
+transition: all 0.2s ease;
+box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.recent-clubs ul li:hover {
+background-color: #e0f2fe;
+transform: translateY(-2px);
+}
+.recent-clubs ul li .club-name {
+font-weight: 600;
+color: #1e293b;
+}
+.recent-clubs ul li .category {
+font-weight: 500;
+color: #64748b;
+font-size: 0.95rem;
+}
+
+/* Charts */
+.chart-row {
+display: flex;
+flex-direction: row;
+gap: 258px; /* reduced gap for better fit */
+overflow-x: auto;
+margin: 40px 35px;
+}
+.chart-container {
+flex: 0 0 auto;
+min-width: 220px; /* smaller for admin view */
+height: 180px;
+background: #f9fafb;
+border-radius: 12px;
+padding: 15px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter + Search Row */
+.filter-search-row {
+display: flex;
+align-items: center;
+gap: 10px;
+margin: 10px 0 20px;
+}
+.filter-dropdown {
+padding: 6px 10px;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 14px;
+background: #fff;
+}
+/* NOTE: .search-input is defined again, potentially overriding the earlier one */
+.search-input {
+flex: 1;
+padding: 6px 10px;
+border: 1px solid #ccc;
+border-radius: 6px;
+}

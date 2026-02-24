@@ -1,0 +1,132 @@
+/* Container */
+.user-achievements-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../achie.jpg"); /* ✅ same image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* smooth parallax feel */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Soft overlay for readability */
+.user-achievements-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75); /* light white overlay */
+  z-index: 0;
+}
+
+/* Keep content above overlay */
+.user-achievements-wrapper * {
+  position: relative;
+  z-index: 1;
+}
+
+.user-achievements-container {
+  padding: 95px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+}
+
+/* Heading */
+.user-achievements-container h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #1e293b;
+}
+
+/* Grid for achievement cards */
+/* Grid for achievement cards */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 🟢 exactly 2 cards per row */
+  gap: 20px;
+}
+
+/* Achievement Card with glassmorphism */
+.achievement-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.type-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Badge colors by type */
+.type-badge.leadership { background-color: #3b82f6; }
+.type-badge.participation { background-color: #10b981; }
+.type-badge.service { background-color: #f59e0b; }
+.type-badge.academic { background-color: #8b5cf6; }
+.type-badge.special_recognition { background-color: #ef4444; }
+
+/* Card Body */
+.card-body p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.card-body .description {
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Loading and error messages */
+.loading, .error, .no-data {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 30px 0;
+  color: #374151;
+}
+
+/* Optional: Scrollbar for grid overflow */
+.achievements-grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.achievements-grid::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.5);
+  border-radius: 3px;
+}

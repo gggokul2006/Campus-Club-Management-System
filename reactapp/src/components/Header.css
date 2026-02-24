@@ -1,0 +1,264 @@
+/* ============================
+   DARK PROFESSIONAL THEME (V2)
+   ============================ */
+
+/* Header container */
+.app-header {
+  position: fixed;          /* keeps it fixed at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;            /* always on top */
+  background: #111827;      /* dark theme background */
+  color: #f8fafc;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+/* Inner wrapper */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand section */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(145deg, #2563eb, #3b82f6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 18px;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.4);
+}
+
+.brand-text .bold {
+  font-weight: 700;
+  font-size: 17px;
+  color: #f8fafc;
+}
+
+.brand-text .tag {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+}
+
+.nav-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition: all 0.25s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #1e293b;
+  color: #60a5fa;
+}
+
+.nav-link.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.5);
+}
+
+/* Authentication buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-login,
+.btn-logout {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Login button */
+.btn-login {
+  background-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.btn-login:hover {
+  background-color: #1d4ed8;
+}
+
+/* Logout button */
+.btn-logout {
+background-color: #dc2626;
+color: #ffffff;
+box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
+
+.btn-logout:hover {
+background-color: #b91c1c;
+}
+
+/* User menu */
+.user-menu {
+position: relative;
+}
+
+.user-circle {
+width: 38px;
+height: 38px;
+border-radius: 50%;
+background-color: #3b82f6;
+color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+font-weight: 600;
+font-size: 14px;
+transition: transform 0.2s ease;
+}
+
+.user-circle:hover {
+transform: scale(1.05);
+box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* User dropdown */
+.user-dropdown {
+position: absolute;
+top: 46px;
+right: 0;
+background-color: #1e293b;
+border-radius: 10px;
+padding: 8px;
+min-width: 140px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+color: #f8fafc;
+z-index: 100;
+}
+
+.dropdown-item {
+padding: 8px 12px;
+cursor: pointer;
+border-radius: 6px;
+transition: all 0.25s ease;
+color: #e2e8f0;
+font-size: 14px;
+}
+
+.dropdown-item:hover {
+background-color: #334155;
+color: #60a5fa;
+}
+
+/* Notification Bell */
+.notif-bell {
+position: relative;
+font-size: 22px;
+cursor: pointer;
+margin-right: 20px;
+color: #cbd5e1;
+transition: color 0.25s ease;
+}
+
+.notif-bell:hover {
+color: #60a5fa;
+}
+
+.notif-dot {
+position: absolute;
+top: -2px;
+right: -5px;
+background: #ef4444;
+color: white;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+}
+
+/* Notifications Dropdown */
+.notif-dropdown {
+position: absolute;
+right: 70px;
+top: 60px;
+background: #1e293b;
+border-radius: 10px;
+width: 260px;
+max-height: 320px;
+overflow-y: auto;
+box-shadow: 0px 4px 14px rgba(0,0,0,0.6);
+padding: 8px 0;
+z-index: 1000;
+}
+
+/* Individual notification item */
+.notif-item {
+padding: 10px 12px;
+border-bottom: 1px solid #334155;
+font-size: 14px;
+color: #e2e8f0;
+background: #111827;
+border-radius: 8px;
+margin: 4px 8px;
+transition: background 0.25s ease;
+}
+
+.notif-item:hover {
+background: #1e40af;
+}
+
+.notif-item .font-semibold {
+font-weight: 600;
+color: #f8fafc;
+}
+
+.notif-item div:not(.font-semibold) {
+font-size: 13px;
+color: #cbd5e1;
+}
+
+.notif-time {
+font-size: 11px;
+color: #94a3b8;
+margin-top: 2px;
+}
+
+.notif-item.unread {
+background: #1e3a8a;
+font-weight: 600;
+}
+
+.notif-empty {
+padding: 14px;
+text-align: center;
+color: #94a3b8;
+font-size: 14px;
+}
